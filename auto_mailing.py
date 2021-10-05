@@ -7,11 +7,12 @@ import datetime
 today = datetime.datetime.now().strftime("%d-%m")
 yearNow = datetime.datetime.now().strftime("%Y")
 
-employee_data = "email_data(2).xlsx"
+#you can choose your own excel file.....
+employee_data = "xyz.xlsx"
 read_data = pd.read_excel(employee_data, sheet_name="Sheet1")
 hd = pd.read_excel(employee_data, sheet_name="Sheet2")
 
-from_addr=' familysinghgkp@gmail.com'
+from_addr='***************@gmail.com'
 
 to_addr=[]
 j=0
@@ -31,8 +32,8 @@ for index, item in hd.iterrows():
         body = 'Dear all Staff, I wish to inform u all that today  will be your holiday on the occasion of  ' + hd["Holiday"][j] + ', Stay safe and stay healthy'
         msg.attach(MIMEText(body, 'plain'))
 
-        email = 'familysinghgkp@gmail.com'
-        password = 'kuldeep123@'
+        email = '****************@gmail.com'
+        password = '@@@@@@@@@1@'
         mail = smtplib.SMTP('smtp.gmail.com', 587)
         mail.ehlo()
         mail.starttls()
