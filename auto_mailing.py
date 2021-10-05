@@ -7,8 +7,10 @@ import datetime
 today = datetime.datetime.now().strftime("%d-%m")
 yearNow = datetime.datetime.now().strftime("%Y")
 
-#you can choose your own excel file.....
+
 employee_data = "xyz.xlsx"
+#you can choose your own excel file.....
+
 read_data = pd.read_excel(employee_data, sheet_name="Sheet1")
 hd = pd.read_excel(employee_data, sheet_name="Sheet2")
 
